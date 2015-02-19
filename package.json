@@ -1,0 +1,29 @@
+{
+  "name": "revertable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "out/index.js",
+  "scripts": {
+    "prepublish": "babel lib --out-dir out --source-maps",
+    "pretest": "npm run prepublish",
+    "test": "tape 'test/**.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmeck/revertable"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmeck/revertable/issues"
+  },
+  "homepage": "https://github.com/bmeck/revertable",
+  "devDependencies": {
+    "babel": "^4.3.0",
+    "debug": "^2.1.1",
+    "tape": "^3.5.0"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.12"
+  }
+}
