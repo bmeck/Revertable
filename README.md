@@ -43,3 +43,22 @@ successfulPromise.then(function success($data) {
   dataNeededToRevert = error.unfinished;
 });
 ```
+
+## Series
+
+Sometimes we need to create a revertable that performs multiple actions.
+We can do this by creating an array of revertables and using `Revertable.series`
+to turn them into a single revertable.
+
+```
+Revertable.series([makeDir, writeFile]).attempt();
+```
+
+## Branch
+
+Sometimes we have a large list of tasks that can be performed in parallel.
+We can support this by using `Revertable.branch` similar to series.
+
+```
+Revertable.branch([writeToCache, writeToDB]).attempt();
+```
