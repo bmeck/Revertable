@@ -28,6 +28,11 @@ successfulPromise.then(function success($data) {
   // often a task needs to produce data on how to undo
   // the side effects that it has created such as
   // where temporary files got saved
+
+  // NOTE: this will not be equal to the data that was resolved
+  //   during perform, this is to keep the data consumption of
+  //   unfinished tasks identical to consuming results from 
+  //   perform.
   dataNeededToRevert = $data;
   
   // since our task is stateless, we can use it to revert
