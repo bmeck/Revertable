@@ -1,7 +1,7 @@
 {
   "name": "revertable",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "a data structure for allowing side effects to be reversed",
   "main": "out/index.js",
   "scripts": {
     "prepublish": "babel lib --out-dir out --source-maps",
@@ -17,6 +17,7 @@
   "bugs": {
     "url": "https://github.com/bmeck/revertable/issues"
   },
+  "keywords": ["task", "job", "reverse", "rollback", "inverse", "undo"],
   "homepage": "https://github.com/bmeck/revertable",
   "devDependencies": {
     "babel": "^4.3.0",
